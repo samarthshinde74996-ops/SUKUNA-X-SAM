@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam's Portfolio — Web Dev & AI Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════ VIDEO BACKGROUND ══════════════════════ -->
+  <div id="bg-wrapper">
+    <video id="bg-video" autoplay loop playsinline muted>
+      <source src="sukuna.mp4" type="video/mp4" />
+    </video>
+    <div id="overlay"></div>
+    <div id="scanlines"></div>
+  </div>
+
+  <!-- ══════════════════════ PARTICLES ══════════════════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">[</span>SAM<span class="brand-dot">.</span>DEV<span class="brand-bracket">]</span>
+    </div>
+    <button id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links">
+      <li><a href="#hero"     class="nav-link">HOME</a></li>
+      <li><a href="#about"    class="nav-link">ABOUT</a></li>
+      <li><a href="#skills"   class="nav-link">SKILLS</a></li>
+      <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+      <li><a href="#contact"  class="nav-link">CONTACT</a></li>
+    </ul>
+    <button id="sound-btn" title="Toggle video sound">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+  </nav>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">// INITIALIZING SEQUENCE...</div>
+      <h1 id="hero-title">
+        <span class="title-line" id="title-line-1">SAM'S</span>
+        <span class="title-line neon-red" id="title-line-2">PORTFOLIO</span>
+      </h1>
+      <div class="hero-subtitle">
+        <span id="typed-text"></span><span class="cursor-blink">|</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <span>VIEW PROJECTS</span>
+          <i class="fas fa-chevron-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost">HIRE ME</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">1st</span><span class="stat-label">Year CSE</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Chaos Mode</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ABOUT ══════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">ABOUT<span class="neon-red">_</span>ME</h2>
+        <div class="title-line-deco"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrapper reveal">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder">
+              <div class="placeholder-sigil">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" stroke="#ff003c" stroke-width="2" fill="none" opacity="0.6"/>
+                  <polygon points="100,30 170,67 170,133 100,170 30,133 30,67" stroke="#ff6b9d" stroke-width="1" fill="none" opacity="0.4"/>
+                  <circle cx="100" cy="100" r="30" stroke="#ff003c" stroke-width="2" fill="none"/>
+                  <text x="100" y="107" text-anchor="middle" fill="#ff6b9d" font-size="18" font-family="Bebas Neue" letter-spacing="2">SAM</text>
+                </svg>
+              </div>
+              <div class="img-corner tl"></div>
+              <div class="img-corner tr"></div>
+              <div class="img-corner bl"></div>
+              <div class="img-corner br"></div>
+            </div>
+          </div>
+          <div class="about-badge">CSE '28</div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-intro">I'm a <span class="highlight">1st year Computer Science student</span> who doesn't wait for permission to build insane things.</p>
+          <p>Currently crafting <span class="highlight">immersive 3D websites</span>, training AI models to recognize faces in real-time, and automating everything with Discord bots and Python scripts. If it's on the bleeding edge — I'm already there.</p>
+          <p>From <span class="highlight">YOLO-powered face detection</span> to browser chess games, I ship projects that actually look and work like they're from 2030.</p>
+          <div class="about-tags">
+            <span class="tag">Three.js</span>
+            <span class="tag">Flask</span>
+            <span class="tag">MediaPipe</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">Hackathons</span>
+            <span class="tag">AI/ML</span>
+          </div>
+          <a href="#" class="btn-ghost" style="margin-top:2rem;display:inline-flex;align-items:center;gap:8px;">
+            <i class="fas fa-download"></i> DOWNLOAD CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SKILLS ══════════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">TECH<span class="neon-red">_</span>STACK</h2>
+        <div class="title-line-deco"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">HTML / CSS / JS</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Python</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            <span class="skill-pct">82%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fab fa-github"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Git / GitHub</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            <span class="skill-pct">78%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-cube"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Three.js / WebGL</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            <span class="skill-pct">70%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-eye"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">MediaPipe / YOLO</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+            <span class="skill-pct">68%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Prompt Engineering</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            <span class="skill-pct">95%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fab fa-discord"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Discord Bots (py)</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <div class="skill-info">
+            <span class="skill-name">Flask / REST API</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            <span class="skill-pct">72%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">PROJECTS<span class="neon-red">_</span></h2>
+        <div class="title-line-deco"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder" style="--accent:#ff003c">
+              <i class="fas fa-chess-knight"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://samarthshinde74996-ops.github.io/chess/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> LIVE DEMO
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">01</span>
+            <h3 class="project-name">Chess</h3>
+            <p class="project-desc">A fully playable browser chess game. Clean UI, legal move validation, check/checkmate detection — built from scratch with vanilla JS.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder" style="--accent:#ff6b9d">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://samarthshinde74996-ops.github.io/chess/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> LIVE DEMO
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">02</span>
+            <h3 class="project-name">Calculator</h3>
+            <p class="project-desc">Slick, responsive calculator with keyboard support and smooth animations. More than just buttons — built with precision and clean logic.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CONTACT ══════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">CONTACT<span class="neon-red">_</span>ME</h2>
+        <div class="title-line-deco"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <p class="contact-intro">Got a project, collab, or just wanna geek out? Hit me up. <span class="highlight">I respond fast.</span></p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>1st Year CSE Student</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/samarthshinde74996-ops" target="_blank" class="social-btn github">
+              <i class="fab fa-github"></i><span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn linkedin">
+              <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            </a>
+            <a href="https://discord.com/users/yourid" target="_blank" class="social-btn discord">
+              <i class="fab fa-discord"></i><span>Discord</span>
+            </a>
+            <a href="https://guns.lol/fcbsamarth" target="_blank" class="social-btn gunslol">
+              <i class="fas fa-crosshairs"></i><span>guns.lol</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="fname">YOUR_NAME</label>
+              <input type="text" id="fname" name="name" placeholder="e.g. Gojo Satoru" autocomplete="off" />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail">YOUR_EMAIL</label>
+              <input type="email" id="femail" name="email" placeholder="you@domain.com" autocomplete="off" />
+              <span class="form-error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">MESSAGE</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Let's build something insane..."></textarea>
+              <span class="form-error" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn-primary full-width" id="submit-btn">
+              <span id="btn-text">TRANSMIT MESSAGE</span>
+              <i class="fas fa-paper-plane" id="btn-icon"></i>
+            </button>
+            <div id="form-success" class="form-success">
+              <i class="fas fa-check-circle"></i> Message received. I'll get back to you shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">[SAM.DEV]</div>
+      <p class="footer-copy">© 2025 Sam · Built with chaos &amp; caffeine · No frameworks harmed.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <div id="cursor-glow"></div>
+  <script src="script.js"></script>
+</body>
+</html>
